@@ -1,0 +1,39 @@
+<html>
+    <h2 id="mysql">4. MySQL - Todo lo del pizarrón</h2>
+    
+    <h3>A) Crear BD</h3>
+    <pre>CREATE DATABASE escuela;
+USE escuela;</pre>
+
+    <h3>B) Crear Tablas</h3>
+    <pre>
+CREATE TABLE alumnos (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  nombre VARCHAR(50),
+  carrera VARCHAR(50),
+  edad INT
+);
+    </pre>
+
+    <h3>C) Registros (INSERT)</h3>
+    <pre>
+INSERT INTO alumnos (nombre, carrera, edad) VALUES
+('Juan Perez', 'Informatica', 18),
+('Maria Lopez', 'Sistemas', 19),
+('Carlos Ruiz', 'Informatica', 20);
+    </pre>
+
+    <h3>D) Consultas</h3>
+    <pre>
+-- Ver todos
+SELECT * FROM alumnos;
+
+-- Filtrar
+SELECT * FROM alumnos WHERE carrera = 'Informatica';
+
+-- Ordenar
+SELECT * FROM alumnos ORDER BY edad DESC;
+
+-- Buscar
+SELECT nombre FROM alumnos WHERE edad > 18;
+</html>
